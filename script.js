@@ -1,7 +1,7 @@
 var score = 0;
 var colorsArray = ['Red', 'Blue', 'Green', 'Orange', 'Purple', 'Yellow'];
 var textIndex, colorIndex;
-var timer = 10;
+var timer = 60;
 var timerColor = 'black';
 var wrongAttempt = 0;
 var userName;
