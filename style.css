@@ -7,6 +7,8 @@ body{
 	justify-content: center;
 }
 
+.tac{text-align: center;}
+
 #userbox{
 	border: 1px solid #ccc;
 	padding: 10px;
@@ -35,12 +37,14 @@ body{
     left: 50%;
     top: 40%;
     display: none;
+    border-radius: 10px;
 }
 
 #wrapper .header{
 	border-bottom: 1px solid #ddd;
 	padding: 10px;
 	display: flex;
+	background: #ecf0f1;
 }
 
 .header .timer, .header .score{
@@ -68,12 +72,15 @@ body{
 	margin-top: 20px;
 }
 
-#wrapper .body .btn{
-	padding: 10px 15px;
-	width: 100px;
-	border: 0;
-	border-radius: 4px;
-	margin: 0 20px;
+#wrapper .body .btn {
+    padding: 15px 15px;
+    width: 100px;
+    border: 0;
+    border-radius: 4px;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #wrapper .body .btn.yes{
@@ -86,14 +93,27 @@ body{
 	color: white;
 }
 
-#wrapper .body .upper-box, 
-#wrapper .body .lower-box{
-	padding: 10px 15px;
-	border: 1px solid #ccc;
-	width: 100px;
-	margin: 10px 0;
+#wrapper .body .upper-box, #wrapper .body .lower-box {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    width: 100px;
+    margin: 10px 0;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0;
 }
 
 .controls-bar{
 	display: flex;
+}
+
+.wrong-attempt-box{
+	color: #ff0000;
+	padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  #wrapper {
+    width: 80%;
+  }
 }

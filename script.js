@@ -1,8 +1,9 @@
 var score = 0;
 var colorsArray = ['Red', 'Blue', 'Green', 'Orange', 'Purple', 'Yellow'];
 var textIndex, colorIndex;
-var timer = 60;
+var timer = 10;
 var timerColor = 'black';
+var wrongAttempt = 0;
 var userName;
 var wrapper = document.getElementById('wrapper');
 var userBox = document.getElementById('userbox');
@@ -11,6 +12,7 @@ localStorage.leaderBoard = [];
 var yes = document.querySelector('.yes');
 var no = document.querySelector('.no');
 var startBtn = document.querySelector('.start-btn');
+var wrongAttemptText = document.querySelector('.wrong-attempts');
 
 if(startBtn){
 	startBtn.addEventListener('click', function(){
@@ -37,6 +39,8 @@ if(yes){
 			score = score + 2;
 		} else {
 			score = score - 1;
+			wrongAttempt = wrongAttempt + 1;
+			wrongAttemptText.innerHTML = wrongAttempt;
 		}
 		generateTextAndBoxColor(textIndex, colorIndex);
 
@@ -52,6 +56,8 @@ if(no){
 			score = score + 2;
 		} else {
 			score = score - 1;
+			wrongAttempt = wrongAttempt + 1;
+			wrongAttemptText.innerHTML = wrongAttempt;
 		}
 		
 		generateTextAndBoxColor(textIndex, colorIndex);
@@ -72,7 +78,7 @@ function generateTextAndBoxColor(){
 
 function gameRestart() {
 	localStorage.leaderBoard = [{user: userName, score: score}, ...localStorage.leaderBoard];
-	alert('Time-out! Your Score is '+ score +'. Your game will restart!')
+	alert('Time-out! Your Score is '+ score +'.\n Wrong attempts: ' + wrongAttempt + '.\n Your game will restart!')
 	timer = 0;
 	score = 0;
 	location.reload();
