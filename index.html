@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Matching Game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div id="userbox">
+		<input type="text" placeholder="Enter your name" class="user-name" />
+		<button type="button" class="start-btn" >Start the game ></button>
+	</div>
+
+	<div id="wrapper">
+		<div class="header">
+			<div class="timer">
+				Time remaining: <span class="time-sec">60</span> sec
+			</div>
+			<div class="score">
+				Score: <span class="score-num">0</span>
+			</div>
+		</div>
+		<div class="body">
+			<div class="buttons-box">
+				<div class="upper-box">Red</div>
+				<div class="lower-box">Black</div>
+			</div>
+			<div class="controls-bar">
+				<button class="yes btn" type="button">Yes</button>
+				<button class="no btn" type="button">No</button>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
